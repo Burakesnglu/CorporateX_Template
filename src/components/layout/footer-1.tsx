@@ -1,177 +1,150 @@
+"use client";
+
 import Link from "next/link";
-import { FiMail, FiPhone, FiMapPin, FiFacebook, FiTwitter, FiInstagram, FiLinkedin } from "react-icons/fi";
-import { cn } from "@/config/theme";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
 
-interface FooterProps {
-  className?: string;
-}
-
-export function Footer1({ className }: FooterProps) {
-  const currentYear = new Date().getFullYear();
-
+export function Footer1() {
   return (
-    <footer className={cn("bg-muted", className)}>
+    <footer className="bg-muted">
       <div className="container py-12 md:py-16">
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           <div>
-            <Link href="/" className="inline-block">
-              <span className="text-xl font-bold">CorporateX</span>
+            <Link href="/" className="text-xl font-bold">
+              CorporateX
             </Link>
             <p className="mt-4 text-sm text-muted-foreground">
-              Modern kurumsal firmalar için tasarlanmış, yüksek performanslı ve kolay özelleştirilebilir bir website teması.
+              A high-performance and easily customizable website theme designed for modern corporate companies.
             </p>
-            <div className="mt-6 flex space-x-4">
+            <div className="mt-6 flex gap-4">
               <Link
                 href="#"
-                className="rounded-full p-2 text-muted-foreground hover:bg-background hover:text-foreground"
-                aria-label="Facebook"
+                className="text-muted-foreground transition-colors hover:text-primary"
               >
-                <FiFacebook className="h-5 w-5" />
+                <Facebook className="h-5 w-5" />
+                <span className="sr-only">Facebook</span>
               </Link>
               <Link
                 href="#"
-                className="rounded-full p-2 text-muted-foreground hover:bg-background hover:text-foreground"
-                aria-label="Twitter"
+                className="text-muted-foreground transition-colors hover:text-primary"
               >
-                <FiTwitter className="h-5 w-5" />
+                <Twitter className="h-5 w-5" />
+                <span className="sr-only">Twitter</span>
               </Link>
               <Link
                 href="#"
-                className="rounded-full p-2 text-muted-foreground hover:bg-background hover:text-foreground"
-                aria-label="Instagram"
+                className="text-muted-foreground transition-colors hover:text-primary"
               >
-                <FiInstagram className="h-5 w-5" />
+                <Instagram className="h-5 w-5" />
+                <span className="sr-only">Instagram</span>
               </Link>
               <Link
                 href="#"
-                className="rounded-full p-2 text-muted-foreground hover:bg-background hover:text-foreground"
-                aria-label="LinkedIn"
+                className="text-muted-foreground transition-colors hover:text-primary"
               >
-                <FiLinkedin className="h-5 w-5" />
+                <Linkedin className="h-5 w-5" />
+                <span className="sr-only">LinkedIn</span>
               </Link>
             </div>
           </div>
-
           <div>
-            <h3 className="text-lg font-semibold">Hızlı Bağlantılar</h3>
+            <h3 className="text-sm font-semibold">Pages</h3>
             <ul className="mt-4 space-y-2">
               <li>
-                <Link href="/" className="text-sm text-muted-foreground hover:text-foreground">
-                  Ana Sayfa
+                <Link
+                  href="/"
+                  className="text-sm text-muted-foreground transition-colors hover:text-primary"
+                >
+                  Home
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="text-sm text-muted-foreground hover:text-foreground">
-                  Hakkımızda
+                <Link
+                  href="/about"
+                  className="text-sm text-muted-foreground transition-colors hover:text-primary"
+                >
+                  About
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="text-sm text-muted-foreground hover:text-foreground">
-                  Hizmetler
+                <Link
+                  href="/services"
+                  className="text-sm text-muted-foreground transition-colors hover:text-primary"
+                >
+                  Services
                 </Link>
               </li>
               <li>
-                <Link href="/projects" className="text-sm text-muted-foreground hover:text-foreground">
-                  Projeler
+                <Link
+                  href="/projects"
+                  className="text-sm text-muted-foreground transition-colors hover:text-primary"
+                >
+                  Projects
                 </Link>
               </li>
               <li>
-                <Link href="/blog" className="text-sm text-muted-foreground hover:text-foreground">
-                  Blog
+                <Link
+                  href="/team"
+                  className="text-sm text-muted-foreground transition-colors hover:text-primary"
+                >
+                  Team
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-sm text-muted-foreground hover:text-foreground">
-                  İletişim
+                <Link
+                  href="/faq"
+                  className="text-sm text-muted-foreground transition-colors hover:text-primary"
+                >
+                  FAQ
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/contact"
+                  className="text-sm text-muted-foreground transition-colors hover:text-primary"
+                >
+                  Contact
                 </Link>
               </li>
             </ul>
           </div>
-
           <div>
-            <h3 className="text-lg font-semibold">Hizmetler</h3>
+            <h3 className="text-sm font-semibold">Contact</h3>
             <ul className="mt-4 space-y-2">
-              <li>
-                <Link
-                  href="/services/web-design"
-                  className="text-sm text-muted-foreground hover:text-foreground"
-                >
-                  Web Tasarım
-                </Link>
+              <li className="text-sm text-muted-foreground">
+                123 Main Street
               </li>
-              <li>
-                <Link
-                  href="/services/mobile-app"
-                  className="text-sm text-muted-foreground hover:text-foreground"
-                >
-                  Mobil Uygulama
-                </Link>
+              <li className="text-sm text-muted-foreground">
+                New York, NY 10001
               </li>
-              <li>
-                <Link
-                  href="/services/digital-marketing"
-                  className="text-sm text-muted-foreground hover:text-foreground"
-                >
-                  Dijital Pazarlama
-                </Link>
+              <li className="text-sm text-muted-foreground">
+                info@corporatex.com
               </li>
-              <li>
-                <Link
-                  href="/services/branding"
-                  className="text-sm text-muted-foreground hover:text-foreground"
-                >
-                  Marka Yönetimi
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/services/consulting"
-                  className="text-sm text-muted-foreground hover:text-foreground"
-                >
-                  Danışmanlık
-                </Link>
+              <li className="text-sm text-muted-foreground">
+                +1 (555) 123-4567
               </li>
             </ul>
           </div>
-
           <div>
-            <h3 className="text-lg font-semibold">İletişim</h3>
-            <ul className="mt-4 space-y-4">
-              <li className="flex items-start space-x-3">
-                <FiMapPin className="mt-0.5 h-5 w-5 text-muted-foreground" />
-                <span className="text-sm text-muted-foreground">
-                  Atatürk Cad. No:123, 34000 İstanbul, Türkiye
-                </span>
-              </li>
-              <li className="flex items-center space-x-3">
-                <FiPhone className="h-5 w-5 text-muted-foreground" />
-                <span className="text-sm text-muted-foreground">+90 212 123 45 67</span>
-              </li>
-              <li className="flex items-center space-x-3">
-                <FiMail className="h-5 w-5 text-muted-foreground" />
-                <span className="text-sm text-muted-foreground">info@corporatex.com</span>
-              </li>
-            </ul>
+            <h3 className="text-sm font-semibold">Newsletter</h3>
+            <p className="mt-4 text-sm text-muted-foreground">
+              Subscribe to our newsletter for the latest news and updates.
+            </p>
+            <div className="mt-4 flex gap-2">
+              <Input
+                type="email"
+                placeholder="Your email address"
+                className="max-w-[220px]"
+              />
+              <Button variant="outline">Subscribe</Button>
+            </div>
           </div>
         </div>
-
         <div className="mt-12 border-t pt-6">
-          <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
-            <p className="text-center text-sm text-muted-foreground md:text-left">
-              &copy; {currentYear} CorporateX. Tüm hakları saklıdır.
-            </p>
-            <div className="flex space-x-6">
-              <Link href="/privacy" className="text-sm text-muted-foreground hover:text-foreground">
-                Gizlilik Politikası
-              </Link>
-              <Link href="/terms" className="text-sm text-muted-foreground hover:text-foreground">
-                Kullanım Şartları
-              </Link>
-              <Link href="/cookies" className="text-sm text-muted-foreground hover:text-foreground">
-                Çerez Politikası
-              </Link>
-            </div>
-          </div>
+          <p className="text-center text-sm text-muted-foreground">
+            &copy; {new Date().getFullYear()} CorporateX. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>

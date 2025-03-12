@@ -1,9 +1,8 @@
 "use client";
 
-import { MainLayout } from "@/components/layout/main-layout";
-import { SEOProvider } from "@/components/providers/seo-provider";
-import { Button } from "@/components/ui/button";
+import { useEffect } from "react";
 import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 export default function Error({
   error,
@@ -12,32 +11,26 @@ export default function Error({
   error: Error & { digest?: string };
   reset: () => void;
 }) {
+  useEffect(() => {
+    // Error logging service integration can be added here
+    console.error(error);
+  }, [error]);
+
   return (
-    <MainLayout>
-      <SEOProvider
-        title="Bir Hata Oluştu | CorporateX"
-        description="Beklenmeyen bir hata oluştu. Lütfen daha sonra tekrar deneyin."
-      >
-        <section className="section overflow-hidden">
-          <div className="container">
-            <div className="mx-auto max-w-3xl text-center">
-              <h1 className="section-title">
-                <span className="gradient-text">500</span> - Bir Hata Oluştu
-              </h1>
-              <p className="section-description">
-                Beklenmeyen bir hata oluştu. Lütfen daha sonra tekrar deneyin veya
-                ana sayfaya dönün.
-              </p>
-              <div className="mt-8 flex items-center justify-center gap-4">
-                <Button onClick={() => reset()}>Tekrar Dene</Button>
-                <Button asChild variant="outline">
-                  <Link href="/">Ana Sayfaya Dön</Link>
-                </Button>
-              </div>
-            </div>
-          </div>
-        </section>
-      </SEOProvider>
-    </MainLayout>
+    <div className="flex min-h-screen flex-col items-center justify-center text-center">
+      <div className="container max-w-md">
+        <h1 className="text-9xl font-bold text-destructive">500</h1>
+        <h2 className="mt-4 text-2xl font-bold">An Error Occurred</h2>
+        <p className="mt-4 text-muted-foreground">
+          We're sorry, something went wrong. Please try again later.
+        </p>
+        <div className="mt-8 flex gap-4 justify-center">
+          <Button onClick={() => reset()}>Try Again</Button>
+          <Button variant="outline" asChild>
+            <Link href="/">Return to Home</Link>
+          </Button>
+        </div>
+      </div>
+    </div>
   );
 } 

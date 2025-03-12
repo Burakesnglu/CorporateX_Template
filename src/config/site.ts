@@ -1,125 +1,143 @@
-import { MainNavItem, FooterItem } from "@/types";
+import { MainNavItem, FooterNavItem } from "@/types";
 
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
   name: "CorporateX",
-  description:
-    "Modern kurumsal firmalar için tasarlanmış, Next.js ve TailwindCSS tabanlı, yüksek performanslı ve kolay özelleştirilebilir bir website teması.",
   url: "https://corporatex.com",
   ogImage: "https://corporatex.com/og.jpg",
+  description:
+    "A high-performance and easily customizable website theme designed for modern corporate companies, based on Next.js and TailwindCSS.",
   links: {
     twitter: "https://twitter.com/corporatex",
     github: "https://github.com/corporatex",
   },
   mainNav: [
     {
-      title: "Ana Sayfa",
+      title: "Home",
       href: "/",
     },
     {
-      title: "Hakkımızda",
+      title: "About",
       href: "/about",
     },
     {
-      title: "Hizmetler",
+      title: "Services",
       href: "/services",
     },
     {
-      title: "Fiyatlandırma",
+      title: "Projects",
+      href: "/projects",
+    },
+    {
+      title: "Pricing",
       href: "/pricing",
     },
     {
-      title: "İletişim",
+      title: "Contact",
       href: "/contact",
     },
   ] satisfies MainNavItem[],
   footerNav: [
     {
-      title: "Kurumsal",
+      title: "Company",
+      href: "#",
       items: [
         {
-          title: "Hakkımızda",
+          title: "About",
           href: "/about",
         },
         {
-          title: "Hizmetler",
-          href: "/services",
+          title: "Team",
+          href: "/team",
         },
         {
-          title: "Fiyatlandırma",
+          title: "Careers",
+          href: "/careers",
+        },
+        {
+          title: "Pricing",
           href: "/pricing",
         },
         {
-          title: "İletişim",
+          title: "Contact",
           href: "/contact",
         },
       ],
     },
     {
-      title: "Hizmetler",
+      title: "Services",
+      href: "#",
       items: [
         {
-          title: "Web Geliştirme",
-          href: "/services#web-development",
+          title: "Web Development",
+          href: "/services/web-development",
         },
         {
-          title: "Mobil Uygulama",
-          href: "/services#mobile-development",
+          title: "Mobile Apps",
+          href: "/services/mobile-apps",
         },
         {
-          title: "UI/UX Tasarım",
-          href: "/services#ui-ux-design",
+          title: "UI/UX Design",
+          href: "/services/ui-ux-design",
         },
         {
-          title: "Dijital Pazarlama",
-          href: "/services#digital-marketing",
+          title: "Digital Marketing",
+          href: "/services/digital-marketing",
+        },
+        {
+          title: "E-Commerce",
+          href: "/services/e-commerce",
         },
       ],
     },
     {
-      title: "Destek",
+      title: "Resources",
+      href: "#",
       items: [
         {
-          title: "SSS",
+          title: "Blog",
+          href: "/blog",
+        },
+        {
+          title: "Case Studies",
+          href: "/case-studies",
+        },
+        {
+          title: "FAQ",
           href: "/faq",
         },
         {
-          title: "Dokümantasyon",
+          title: "Documentation",
           href: "/docs",
         },
         {
-          title: "Gizlilik Politikası",
-          href: "/privacy",
+          title: "Privacy Policy",
+          href: "/privacy-policy",
         },
         {
-          title: "Kullanım Koşulları",
-          href: "/terms",
+          title: "Terms of Service",
+          href: "/terms-of-service",
         },
       ],
     },
     {
-      title: "İletişim",
+      title: "Contact",
+      href: "#",
       items: [
         {
           title: "info@corporatex.com",
           href: "mailto:info@corporatex.com",
         },
         {
-          title: "+90 (212) 555 55 55",
-          href: "tel:+902125555555",
+          title: "+1 (555) 123-4567",
+          href: "tel:+15551234567",
         },
         {
-          title: "Twitter",
-          href: "https://twitter.com/corporatex",
-          external: true,
-        },
-        {
-          title: "GitHub",
-          href: "https://github.com/corporatex",
-          external: true,
+          title: "123 Main Street, New York, NY 10001",
+          href: "https://maps.google.com",
         },
       ],
     },
-  ] satisfies FooterItem[],
+  ] satisfies FooterNavItem[],
 }; 

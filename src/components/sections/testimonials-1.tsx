@@ -6,113 +6,76 @@ import Image from "next/image";
 const testimonials = [
   {
     content:
-      "CorporateX ile çalışmak harika bir deneyimdi. Profesyonel ekipleri ve müşteri odaklı yaklaşımları ile projemizi başarıyla tamamladılar.",
-    author: {
-      name: "Ahmet Yılmaz",
-      role: "CEO, Tech Solutions",
-      image:
-        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-    },
+      "Working with CorporateX was an amazing experience. Their professional team and customer-focused approach helped us complete our project successfully.",
+    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+    name: "John Smith",
+    title: "CEO, TechVision Inc.",
   },
   {
     content:
-      "Web sitemizin yenilenmesi sürecinde gösterdikleri özen ve sundukları yaratıcı çözümler için teşekkür ederiz. Sonuçtan çok memnunuz.",
-    author: {
-      name: "Ayşe Kaya",
-      role: "Marketing Director, Creative Co.",
-      image:
-        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-    },
+      "We thank them for their attention to detail and creative solutions during the renewal of our website. We are very satisfied with the results.",
+    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+    name: "Sarah Johnson",
+    title: "Marketing Director, Global Brands",
   },
   {
     content:
-      "Modern ve kullanıcı dostu bir web sitesi oluşturdular. SEO çalışmaları sayesinde online görünürlüğümüz önemli ölçüde arttı.",
-    author: {
-      name: "Mehmet Demir",
-      role: "Founder, Digital Agency",
-      image:
-        "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-    },
+      "They created a modern and user-friendly website. Thanks to their SEO work, our online visibility has significantly increased.",
+    image: "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+    name: "Michael Brown",
+    title: "Founder, Innovative Solutions",
   },
 ];
 
 export function Testimonials1() {
   return (
-    <section className="section">
+    <section className="bg-muted py-24">
       <div className="container">
-        <div className="text-center">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="section-title"
-          >
-            Müşteri Yorumları
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="section-description mx-auto max-w-2xl"
-          >
-            Müşterilerimizin bizimle çalışma deneyimleri ve projeleri hakkında ne
-            söylediklerini öğrenin.
-          </motion.p>
-        </div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="mx-auto max-w-2xl text-center"
+        >
+          <h2 className="mb-4 text-3xl font-bold tracking-tight md:text-4xl">
+            Customer Testimonials
+          </h2>
+          <p className="text-xl text-muted-foreground">
+            Learn what our customers say about their experience working with us
+            and about their projects.
+          </p>
+        </motion.div>
 
         <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-3">
-          {testimonials.map((testimonial, index) => (
+          {testimonials.map((testimonial, i) => (
             <motion.div
-              key={index}
+              key={i}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="flex flex-col justify-between rounded-lg border bg-background p-6 shadow-sm"
+              transition={{ duration: 0.5, delay: i * 0.1 }}
+              className="flex flex-col justify-between rounded-xl bg-background p-8 shadow-sm ring-1 ring-muted"
             >
               <div>
-                <div className="relative h-7 w-7">
-                  <svg
-                    className="absolute right-0 top-0 h-full w-full rotate-180 opacity-5 transition-opacity group-hover:opacity-10"
-                    viewBox="0 0 100 100"
-                    preserveAspectRatio="none"
-                  >
-                    <defs>
-                      <pattern
-                        id={`quotes-${index}`}
-                        width="20"
-                        height="20"
-                        patternUnits="userSpaceOnUse"
-                      >
-                        <path
-                          d="M10 0C4.477 0 0 4.477 0 10c0 5.523 4.477 10 10 10s10-4.477 10-10C20 4.477 15.523 0 10 0zM8.889 13.333H6.667V8.889h2.222V6.667H5.556v7.778h3.333v-1.112zm5.555 0h-2.222V8.889h2.222V6.667h-3.333v7.778h3.333v-1.112z"
-                          fill="currentColor"
-                          fillRule="evenodd"
-                          opacity="0.5"
-                        />
-                      </pattern>
-                    </defs>
-                    <rect width="100" height="100" fill={`url(#quotes-${index})`} />
-                  </svg>
-                </div>
-                <p className="mt-4 text-lg">{testimonial.content}</p>
+                <p className="text-lg leading-relaxed text-muted-foreground">
+                  &ldquo;{testimonial.content}&rdquo;
+                </p>
               </div>
-              <div className="mt-6 flex items-center gap-4">
+              <div className="mt-8 flex items-center gap-4">
                 <div className="relative h-12 w-12 overflow-hidden rounded-full">
                   <Image
-                    src={testimonial.author.image}
-                    alt={testimonial.author.name}
+                    src={testimonial.image}
+                    alt={testimonial.name}
                     fill
                     className="object-cover"
                   />
                 </div>
                 <div>
-                  <div className="font-semibold">{testimonial.author.name}</div>
-                  <div className="text-sm text-muted-foreground">
-                    {testimonial.author.role}
-                  </div>
+                  <h3 className="font-semibold">{testimonial.name}</h3>
+                  <p className="text-sm text-muted-foreground">
+                    {testimonial.title}
+                  </p>
                 </div>
               </div>
             </motion.div>

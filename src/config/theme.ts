@@ -1,13 +1,13 @@
 import { type ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
 
-// Tailwind sınıflarını birleştirmek için yardımcı fonksiyon
+// Helper function to merge Tailwind classes
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-// Tema renkleri
-export const themeColors = {
+// Theme colors
+export const colors = {
   primary: {
     50: "hsl(var(--primary-50))",
     100: "hsl(var(--primary-100))",
@@ -21,89 +21,89 @@ export const themeColors = {
     900: "hsl(var(--primary-900))",
     950: "hsl(var(--primary-950))",
   },
-  secondary: {
-    50: "hsl(var(--secondary-50))",
-    100: "hsl(var(--secondary-100))",
-    200: "hsl(var(--secondary-200))",
-    300: "hsl(var(--secondary-300))",
-    400: "hsl(var(--secondary-400))",
-    500: "hsl(var(--secondary-500))",
-    600: "hsl(var(--secondary-600))",
-    700: "hsl(var(--secondary-700))",
-    800: "hsl(var(--secondary-800))",
-    900: "hsl(var(--secondary-900))",
-    950: "hsl(var(--secondary-950))",
-  },
-  accent: {
-    50: "hsl(var(--accent-50))",
-    100: "hsl(var(--accent-100))",
-    200: "hsl(var(--accent-200))",
-    300: "hsl(var(--accent-300))",
-    400: "hsl(var(--accent-400))",
-    500: "hsl(var(--accent-500))",
-    600: "hsl(var(--accent-600))",
-    700: "hsl(var(--accent-700))",
-    800: "hsl(var(--accent-800))",
-    900: "hsl(var(--accent-900))",
-    950: "hsl(var(--accent-950))",
+  gray: {
+    50: "hsl(var(--gray-50))",
+    100: "hsl(var(--gray-100))",
+    200: "hsl(var(--gray-200))",
+    300: "hsl(var(--gray-300))",
+    400: "hsl(var(--gray-400))",
+    500: "hsl(var(--gray-500))",
+    600: "hsl(var(--gray-600))",
+    700: "hsl(var(--gray-700))",
+    800: "hsl(var(--gray-800))",
+    900: "hsl(var(--gray-900))",
+    950: "hsl(var(--gray-950))",
   },
 };
 
-// Tipografi boyutları
+// Border radius
+export const radius = {
+  none: "0px",
+  sm: "0.125rem",
+  md: "0.25rem",
+  lg: "0.5rem",
+  xl: "0.75rem",
+  "2xl": "1rem",
+  "3xl": "1.5rem",
+  full: "9999px",
+};
+
+// Typography sizes
 export const typography = {
   h1: "text-4xl font-bold tracking-tight lg:text-5xl",
   h2: "text-3xl font-bold tracking-tight lg:text-4xl",
-  h3: "text-2xl font-bold tracking-tight lg:text-3xl",
-  h4: "text-xl font-bold tracking-tight lg:text-2xl",
-  h5: "text-lg font-bold tracking-tight lg:text-xl",
-  h6: "text-base font-bold tracking-tight lg:text-lg",
-  p: "text-base leading-7",
-  lead: "text-xl leading-7",
+  h3: "text-2xl font-bold tracking-tight",
+  h4: "text-xl font-bold",
+  p: "leading-7",
+  lead: "text-xl text-muted-foreground",
   large: "text-lg font-semibold",
   small: "text-sm font-medium leading-none",
   muted: "text-sm text-muted-foreground",
 };
 
-// Animasyon varyantları
+// Animation variants
 export const animations = {
   fadeIn: {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1 },
+    initial: { opacity: 0 },
+    animate: { opacity: 1 },
+    exit: { opacity: 0 },
   },
-  slideUp: {
-    hidden: { y: 20, opacity: 0 },
-    visible: { y: 0, opacity: 1 },
+  fadeInUp: {
+    initial: { opacity: 0, y: 20 },
+    animate: { opacity: 1, y: 0 },
+    exit: { opacity: 0, y: 20 },
   },
-  slideDown: {
-    hidden: { y: -20, opacity: 0 },
-    visible: { y: 0, opacity: 1 },
+  fadeInDown: {
+    initial: { opacity: 0, y: -20 },
+    animate: { opacity: 1, y: 0 },
+    exit: { opacity: 0, y: -20 },
   },
-  slideLeft: {
-    hidden: { x: 20, opacity: 0 },
-    visible: { x: 0, opacity: 1 },
+  fadeInLeft: {
+    initial: { opacity: 0, x: -20 },
+    animate: { opacity: 1, x: 0 },
+    exit: { opacity: 0, x: -20 },
   },
-  slideRight: {
-    hidden: { x: -20, opacity: 0 },
-    visible: { x: 0, opacity: 1 },
+  fadeInRight: {
+    initial: { opacity: 0, x: 20 },
+    animate: { opacity: 1, x: 0 },
+    exit: { opacity: 0, x: 20 },
   },
-  staggerChildren: {
-    visible: {},
-    hidden: {},
-  },
-  staggerItem: {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 },
+  zoomIn: {
+    initial: { opacity: 0, scale: 0.95 },
+    animate: { opacity: 1, scale: 1 },
+    exit: { opacity: 0, scale: 0.95 },
   },
 };
 
-// Geçiş süreleri
-export const transitions = {
+// Transition durations
+export const durations = {
   fast: 0.2,
-  default: 0.3,
+  normal: 0.3,
   slow: 0.5,
+  slower: 0.8,
 };
 
-// Medya sorguları için ekran boyutları
+// Screen sizes for media queries
 export const screens = {
   sm: "640px",
   md: "768px",
@@ -112,17 +112,8 @@ export const screens = {
   "2xl": "1536px",
 };
 
-// Tema varyantları
+// Theme variants
 export const themeVariants = {
-  default: "default",
-  blue: "blue",
-  green: "green",
-  purple: "purple",
-  orange: "orange",
-};
-
-// Tema modu
-export const themeMode = {
   light: "light",
   dark: "dark",
   system: "system",
