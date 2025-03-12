@@ -8,10 +8,10 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 const navigation = [
-  { name: "Ana Sayfa", href: "/" },
-  { name: "Hakkımızda", href: "/about" },
-  { name: "Hizmetler", href: "/services" },
-  { name: "İletişim", href: "/contact" },
+  { name: "Home", href: "/" },
+  { name: "About", href: "/about" },
+  { name: "Services", href: "/services" },
+  { name: "Contact", href: "/contact" },
 ];
 
 export function Header() {
@@ -76,7 +76,7 @@ export function Header() {
             </svg>
           </Button>
           <Button asChild>
-            <Link href="/contact">İletişime Geçin</Link>
+            <Link href="/contact">Contact Us</Link>
           </Button>
         </div>
 
@@ -149,7 +149,7 @@ export function Header() {
                 ))}
                 <Button asChild className="mt-4">
                   <Link href="/contact" onClick={() => setIsOpen(false)}>
-                    İletişime Geçin
+                    Contact Us
                   </Link>
                 </Button>
               </nav>

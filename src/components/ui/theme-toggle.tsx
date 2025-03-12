@@ -13,7 +13,14 @@ import {
 } from "@/components/ui/dropdown-menu"
 
 export function ThemeToggle() {
-  const { setTheme } = useTheme()
+  const { theme, setTheme } = useTheme()
+
+  // Function to handle theme change and ensure it persists
+  const handleThemeChange = (newTheme: string) => {
+    setTheme(newTheme)
+    // Store the theme preference in localStorage
+    localStorage.setItem("theme-mode", newTheme)
+  }
 
   return (
     <DropdownMenu>
@@ -25,13 +32,22 @@ export function ThemeToggle() {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
-        <DropdownMenuItem onClick={() => setTheme("light")}>
+        <DropdownMenuItem 
+          onClick={() => handleThemeChange("light")}
+          className={theme === "light" ? "bg-accent" : ""}
+        >
           Light
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("dark")}>
+        <DropdownMenuItem 
+          onClick={() => handleThemeChange("dark")}
+          className={theme === "dark" ? "bg-accent" : ""}
+        >
           Dark
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("system")}>
+        <DropdownMenuItem 
+          onClick={() => handleThemeChange("system")}
+          className={theme === "system" ? "bg-accent" : ""}
+        >
           System
         </DropdownMenuItem>
       </DropdownMenuContent>

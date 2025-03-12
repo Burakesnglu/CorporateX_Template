@@ -10,173 +10,173 @@ import { motion } from "framer-motion";
 import { FiArrowLeft, FiCheck } from "react-icons/fi";
 import { notFound } from "next/navigation";
 
-// Hizmet verileri
+// Service data
 const services = [
   {
     id: "web-development",
-    title: "Web Geliştirme",
-    description: "Modern ve kullanıcı dostu web siteleri ve web uygulamaları geliştiriyoruz.",
-    longDescription: "İşletmenizin dijital varlığını güçlendirmek için modern teknolojiler kullanarak özel web siteleri ve web uygulamaları geliştiriyoruz. Responsive tasarım, SEO optimizasyonu ve hızlı yükleme süreleri ile kullanıcı deneyimini en üst seviyeye çıkarıyoruz. Her projeyi müşterilerimizin ihtiyaçlarına ve hedeflerine göre özelleştiriyoruz.",
+    title: "Web Development",
+    description: "We develop modern and user-friendly websites and web applications.",
+    longDescription: "We develop custom websites and web applications using modern technologies to strengthen your business's digital presence. With responsive design, SEO optimization, and fast loading times, we elevate the user experience to the highest level. We customize each project according to our clients' needs and goals.",
     icon: "/images/icons/web-dev.svg",
     image: "/images/services/web-development.jpg",
     features: [
-      "Responsive tasarım",
-      "SEO optimizasyonu",
-      "Hızlı yükleme süreleri",
+      "Responsive design",
+      "SEO optimization",
+      "Fast loading times",
       "Modern UI/UX",
-      "Güvenli altyapı",
-      "Kolay yönetim paneli"
+      "Secure infrastructure",
+      "Easy management panel"
     ],
     process: [
       {
-        title: "Keşif ve Planlama",
-        description: "İhtiyaçlarınızı ve hedeflerinizi anlamak için detaylı bir keşif süreci yürütüyoruz. Projenizin kapsamını, zaman çizelgesini ve bütçesini belirliyoruz."
+        title: "Discovery & Planning",
+        description: "We conduct a detailed discovery process to understand your needs and goals. We determine the scope, timeline, and budget of your project."
       },
       {
-        title: "Tasarım",
-        description: "Markanızın kimliğini yansıtan, kullanıcı dostu ve modern bir tasarım oluşturuyoruz. Wireframe ve prototiplerle tasarımı onayınıza sunuyoruz."
+        title: "Design",
+        description: "We create a user-friendly and modern design that reflects your brand identity. We present the design for your approval with wireframes and prototypes."
       },
       {
-        title: "Geliştirme",
-        description: "Modern teknolojiler kullanarak web sitenizi veya uygulamanızı geliştiriyoruz. Düzenli ilerleme raporları ile süreci şeffaf bir şekilde yönetiyoruz."
+        title: "Development",
+        description: "We develop your website or application using modern technologies. We manage the process transparently with regular progress reports."
       },
       {
-        title: "Test ve Optimizasyon",
-        description: "Farklı cihazlarda ve tarayıcılarda kapsamlı testler yapıyor, performans ve SEO optimizasyonlarını gerçekleştiriyoruz."
+        title: "Testing & Optimization",
+        description: "We conduct comprehensive tests on different devices and browsers, and perform performance and SEO optimizations."
       },
       {
-        title: "Lansman ve Destek",
-        description: "Web sitenizi veya uygulamanızı yayına alıyor ve sürekli teknik destek sağlıyoruz. Düzenli bakım ve güncellemelerle sitenizin güncel kalmasını sağlıyoruz."
+        title: "Launch & Support",
+        description: "We launch your website or application and provide continuous technical support. We ensure your site stays up-to-date with regular maintenance and updates."
       }
     ],
     faq: [
       {
-        question: "Bir web sitesi geliştirme projesi ne kadar sürer?",
-        answer: "Projenin kapsamına bağlı olarak, basit bir web sitesi 4-6 hafta içinde tamamlanabilirken, daha karmaşık projeler 2-4 ay sürebilir. Proje başlangıcında detaylı bir zaman çizelgesi sunuyoruz."
+        question: "How long does a web development project take?",
+        answer: "Depending on the scope of the project, a simple website can be completed within 4-6 weeks, while more complex projects may take 2-4 months. We provide a detailed timeline at the start of the project."
       },
       {
-        question: "Web sitem için hangi teknolojileri kullanıyorsunuz?",
-        answer: "Projenizin ihtiyaçlarına göre en uygun teknolojileri seçiyoruz. Frontend için React, Next.js, Vue.js; backend için Node.js, PHP, Python; veritabanı için MySQL, PostgreSQL, MongoDB gibi teknolojileri kullanıyoruz."
+        question: "What technologies do you use for my website?",
+        answer: "We select the most appropriate technologies based on your project's needs. For frontend, we use React, Next.js, Vue.js; for backend, Node.js, PHP, Python; and for databases, MySQL, PostgreSQL, MongoDB, among others."
       },
       {
-        question: "Web sitemi kendim güncelleyebilir miyim?",
-        answer: "Evet, projelerimizde kullanıcı dostu bir yönetim paneli sunuyoruz. Böylece teknik bilgiye ihtiyaç duymadan içeriklerinizi kolayca güncelleyebilirsiniz."
+        question: "Can I update my website myself?",
+        answer: "Yes, we provide a user-friendly management panel in our projects. This allows you to easily update your content without needing technical knowledge."
       },
       {
-        question: "SEO optimizasyonu hizmete dahil mi?",
-        answer: "Evet, tüm web projelerimizde temel SEO optimizasyonu standart olarak sunuyoruz. Daha kapsamlı SEO çalışmaları için ek hizmetlerimiz bulunmaktadır."
+        question: "Is SEO optimization included in the service?",
+        answer: "Yes, we offer basic SEO optimization as standard in all our web projects. We also have additional services for more comprehensive SEO work."
       }
     ]
   },
   {
     id: "mobile-development",
-    title: "Mobil Uygulama Geliştirme",
-    description: "iOS ve Android platformları için yüksek performanslı mobil uygulamalar geliştiriyoruz.",
-    longDescription: "İşletmenizin mobil stratejisini güçlendirmek için iOS ve Android platformları için yüksek performanslı, kullanıcı dostu mobil uygulamalar geliştiriyoruz. Native ve cross-platform teknolojiler kullanarak, ihtiyaçlarınıza en uygun çözümü sunuyoruz. Kullanıcı deneyimini ön planda tutarak, markanızı mobil dünyada başarıyla temsil ediyoruz.",
+    title: "Mobile App Development",
+    description: "We develop high-performance mobile applications for iOS and Android platforms.",
+    longDescription: "We develop high-performance, user-friendly mobile applications for iOS and Android platforms to strengthen your business's mobile strategy. Using native and cross-platform technologies, we provide the most suitable solution for your needs. By prioritizing user experience, we successfully represent your brand in the mobile world.",
     icon: "/images/icons/mobile-dev.svg",
     image: "/images/services/mobile-development.jpg",
     features: [
-      "Native ve cross-platform geliştirme",
-      "Kullanıcı dostu arayüz",
-      "Offline çalışma desteği",
-      "Push bildirim entegrasyonu",
-      "Analitik entegrasyonu",
-      "Sürekli güncelleme desteği"
+      "Native and cross-platform development",
+      "User-friendly interface",
+      "Offline functionality support",
+      "Push notification integration",
+      "Analytics integration",
+      "Continuous update support"
     ],
     process: [
       {
-        title: "Keşif ve Planlama",
-        description: "Mobil uygulama ihtiyaçlarınızı ve hedef kitlenizi analiz ediyor, teknik gereksinimleri belirliyoruz."
+        title: "Discovery and Planning",
+        description: "We analyze your mobile application needs and target audience, and determine the technical requirements."
       },
       {
-        title: "UI/UX Tasarım",
-        description: "Kullanıcı deneyimini ön planda tutan, platform standartlarına uygun arayüz tasarımları oluşturuyoruz."
+        title: "UI/UX Design",
+        description: "We create interface designs that prioritize user experience and comply with platform standards."
       },
       {
-        title: "Geliştirme",
-        description: "Native veya cross-platform teknolojiler kullanarak uygulamanızı geliştiriyoruz. Düzenli demo sürümleri ile ilerlemeyi takip edebilirsiniz."
+        title: "Development",
+        description: "We develop your application using native or cross-platform technologies. You can track progress with regular demo versions."
       },
       {
-        title: "Test ve Kalite Kontrol",
-        description: "Farklı cihazlarda ve işletim sistemi versiyonlarında kapsamlı testler yapıyor, hataları gideriyoruz."
+        title: "Testing and Quality Control",
+        description: "We conduct comprehensive tests on different devices and operating system versions, and fix any issues."
       },
       {
-        title: "Yayınlama ve Destek",
-        description: "Uygulamanızı App Store ve Google Play Store'da yayınlıyor, sürekli teknik destek ve güncelleme hizmetleri sunuyoruz."
+        title: "Launch and Support",
+        description: "We publish your application on the App Store and Google Play Store, and provide continuous technical support and update services."
       }
     ],
     faq: [
       {
-        question: "Native ve cross-platform geliştirme arasındaki fark nedir?",
-        answer: "Native geliştirme, her platform (iOS ve Android) için ayrı kodlama yapılmasını içerir ve en yüksek performansı sunar. Cross-platform geliştirme ise tek bir kod tabanı kullanarak her iki platformda da çalışan uygulamalar oluşturmayı sağlar, bu da geliştirme süresini ve maliyetini azaltır."
+        question: "What is the difference between native and cross-platform development?",
+        answer: "Native development involves separate coding for each platform (iOS and Android) and offers the highest performance. Cross-platform development allows creating applications that work on both platforms using a single codebase, which reduces development time and cost."
       },
       {
-        question: "Mobil uygulama geliştirme süreci ne kadar sürer?",
-        answer: "Uygulamanın karmaşıklığına bağlı olarak, basit bir uygulama 2-3 ay içinde tamamlanabilirken, daha kapsamlı projeler 4-6 ay sürebilir."
+        question: "How long does the mobile app development process take?",
+        answer: "Depending on the complexity of the application, a simple app can be completed within 2-3 months, while more comprehensive projects may take 4-6 months."
       },
       {
-        question: "Uygulamamı App Store ve Google Play'e yükleme konusunda yardım ediyor musunuz?",
-        answer: "Evet, uygulama mağazalarına yükleme sürecini tamamen yönetiyoruz. Gerekli hesapların oluşturulması, uygulama açıklamalarının hazırlanması ve onay süreçlerinin takibi konularında destek sağlıyoruz."
+        question: "Do you help with uploading my app to the App Store and Google Play?",
+        answer: "Yes, we completely manage the app store submission process. We provide support for creating necessary accounts, preparing app descriptions, and monitoring approval processes."
       },
       {
-        question: "Mevcut bir uygulamayı güncelleyebilir misiniz?",
-        answer: "Evet, mevcut uygulamanızı analiz ederek güncellemeler ve iyileştirmeler yapabiliriz. Kodun kalitesine ve yapısına bağlı olarak, bazen tamamen yeniden geliştirme daha uygun maliyetli olabilir."
+        question: "Can you update an existing application?",
+        answer: "Yes, we can analyze your existing application and make updates and improvements. Depending on the quality and structure of the code, sometimes complete redevelopment may be more cost-effective."
       }
     ]
   },
   {
     id: "ui-ux-design",
-    title: "UI/UX Tasarım",
-    description: "Kullanıcı deneyimini ön planda tutan, modern ve etkileyici arayüz tasarımları oluşturuyoruz.",
-    longDescription: "Kullanıcı deneyimini ön planda tutan, modern ve etkileyici arayüz tasarımları oluşturuyoruz. Kullanıcı araştırmaları ve davranış analizleri ile hedef kitlenizin ihtiyaçlarını anlıyor, bu doğrultuda sezgisel ve çekici tasarımlar geliştiriyoruz. Markanızın kimliğini dijital platformlarda en iyi şekilde yansıtarak, kullanıcıların ürünlerinizle etkileşimini artırıyoruz.",
+    title: "UI/UX Design",
+    description: "We create modern and impressive interface designs that prioritize user experience.",
+    longDescription: "We create modern and impressive interface designs that prioritize user experience. Through user research and behavior analysis, we understand the needs of your target audience and develop intuitive and attractive designs accordingly. By best reflecting your brand identity on digital platforms, we increase user interaction with your products.",
     icon: "/images/icons/design.svg",
     image: "/images/services/ui-ux-design.jpg",
     features: [
-      "Kullanıcı odaklı tasarım",
-      "Wireframing ve prototipler",
-      "Kullanılabilirlik testleri",
-      "Marka kimliği entegrasyonu",
-      "Responsive tasarım",
-      "Erişilebilirlik standartları"
+      "User-centered design",
+      "Wireframing and prototypes",
+      "Usability testing",
+      "Brand identity integration",
+      "Responsive design",
+      "Accessibility standards"
     ],
     process: [
       {
-        title: "Kullanıcı Araştırması",
-        description: "Hedef kitlenizi ve ihtiyaçlarını anlamak için kapsamlı kullanıcı araştırmaları yapıyoruz."
+        title: "User Research",
+        description: "We conduct comprehensive user research to understand your target audience and their needs."
       },
       {
         title: "Wireframing",
-        description: "Kullanıcı deneyimini optimize etmek için temel sayfa yapılarını ve bilgi mimarisini oluşturuyoruz."
+        description: "We create basic page structures and information architecture to optimize user experience."
       },
       {
-        title: "UI Tasarım",
-        description: "Markanızın kimliğini yansıtan, modern ve çekici arayüz tasarımları geliştiriyoruz."
+        title: "UI Design",
+        description: "We develop modern and attractive interface designs that reflect your brand identity."
       },
       {
-        title: "Prototipleme",
-        description: "Etkileşimli prototipler oluşturarak tasarımın gerçek kullanımını simüle ediyoruz."
+        title: "Prototyping",
+        description: "We create interactive prototypes to simulate the actual use of the design."
       },
       {
-        title: "Kullanılabilirlik Testleri",
-        description: "Gerçek kullanıcılarla testler yaparak tasarımın etkinliğini değerlendiriyor ve iyileştiriyoruz."
+        title: "Usability Testing",
+        description: "We evaluate and improve the effectiveness of the design by conducting tests with real users."
       }
     ],
     faq: [
       {
-        question: "UI ve UX arasındaki fark nedir?",
-        answer: "UI (User Interface) kullanıcı arayüzü tasarımını, yani ürünün görsel öğelerini ifade eder. UX (User Experience) ise kullanıcı deneyimini, yani kullanıcının ürünle etkileşiminin tüm yönlerini kapsar. İyi bir dijital ürün için her ikisi de kritik öneme sahiptir."
+        question: "What is the difference between UI and UX?",
+        answer: "UI (User Interface) refers to the visual elements of a product's design. UX (User Experience) encompasses all aspects of a user's interaction with the product. Both are critical for a good digital product."
       },
       {
-        question: "Tasarım sürecinde müşteri olarak ne kadar dahil olacağım?",
-        answer: "Tasarım sürecinin her aşamasında geri bildirimlerinizi alıyoruz. Wireframe, stil rehberi ve arayüz tasarımları için onayınızı istiyoruz. İşbirlikçi bir yaklaşımla, vizyonunuzu en iyi şekilde hayata geçirmeyi hedefliyoruz."
+        question: "How involved will I be as a client in the design process?",
+        answer: "We seek your feedback at every stage of the design process. We request your approval for wireframes, style guides, and interface designs. With a collaborative approach, we aim to bring your vision to life in the best way possible."
       },
       {
-        question: "Mevcut markamızın kimliğine uygun tasarım yapabilir misiniz?",
-        answer: "Evet, mevcut marka kimliğinizi dijital platformlara uyarlamak konusunda uzmanız. Marka kılavuzunuzu takip ederek, tutarlı bir kullanıcı deneyimi oluşturuyoruz."
+        question: "Can you design according to our existing brand identity?",
+        answer: "Yes, we specialize in adapting your existing brand identity to digital platforms. By following your brand guidelines, we create a consistent user experience."
       },
       {
-        question: "Tasarım sürecinde hangi araçları kullanıyorsunuz?",
-        answer: "Figma, Adobe XD, Sketch gibi endüstri standardı tasarım araçlarını kullanıyoruz. Prototipleme için Figma, InVision veya Protopie kullanıyoruz. Tercihlerinize göre çalışma yöntemimizi uyarlayabiliriz."
+        question: "What tools do you use in the design process?",
+        answer: "We use industry-standard design tools such as Figma, Adobe XD, and Sketch. For prototyping, we use Figma, InVision, or Protopie. We can adapt our working method according to your preferences."
       }
     ]
   }
@@ -199,7 +199,7 @@ export default function ServiceDetailPage({ params }: { params: { id: string } }
               <div>
                 <Link href="/services" className="mb-6 inline-flex items-center text-sm text-muted-foreground hover:text-foreground">
                   <FiArrowLeft className="mr-2 h-4 w-4" />
-                  Tüm Hizmetler
+                  All Services
                 </Link>
                 <h1 className="text-4xl font-bold tracking-tight md:text-5xl">
                   {service.title}
@@ -209,7 +209,7 @@ export default function ServiceDetailPage({ params }: { params: { id: string } }
                 </p>
                 <div className="mt-8">
                   <Button>
-                    Ücretsiz Danışmanlık Alın
+                    Get Free Consultation
                   </Button>
                 </div>
               </div>
@@ -230,10 +230,10 @@ export default function ServiceDetailPage({ params }: { params: { id: string } }
           <div className="container">
             <div className="mx-auto max-w-3xl text-center">
               <h2 className="text-3xl font-bold tracking-tight md:text-4xl">
-                Neler Sunuyoruz?
+                What We Offer
               </h2>
               <p className="mt-4 text-lg text-muted-foreground">
-                {service.title} hizmetimizin öne çıkan özellikleri
+                Key features of our {service.title} service
               </p>
             </div>
 
@@ -264,10 +264,10 @@ export default function ServiceDetailPage({ params }: { params: { id: string } }
           <div className="container">
             <div className="mx-auto max-w-3xl text-center">
               <h2 className="text-3xl font-bold tracking-tight md:text-4xl">
-                Çalışma Sürecimiz
+                Our Work Process
               </h2>
               <p className="mt-4 text-lg text-muted-foreground">
-                {service.title} projelerimizde izlediğimiz adımlar
+                Steps we follow in our {service.title} projects
               </p>
             </div>
 
@@ -301,10 +301,10 @@ export default function ServiceDetailPage({ params }: { params: { id: string } }
           <div className="container">
             <div className="mx-auto max-w-3xl text-center">
               <h2 className="text-3xl font-bold tracking-tight md:text-4xl">
-                Sıkça Sorulan Sorular
+                Frequently Asked Questions
               </h2>
               <p className="mt-4 text-lg text-muted-foreground">
-                {service.title} hizmetimiz hakkında merak edilenler
+                Common questions about our {service.title} service
               </p>
             </div>
 

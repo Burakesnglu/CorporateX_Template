@@ -21,12 +21,12 @@ export function MainLayout({ children }: MainLayoutProps) {
       disableTransitionOnChange
     >
       <SEOProvider
-        title="CorporateX - Modern Kurumsal Website Teması"
-        description="CorporateX, modern kurumsal firmalar için tasarlanmış, Next.js ve TailwindCSS tabanlı, yüksek performanslı ve kolay özelleştirilebilir bir website temasıdır."
+        title="CorporateX - Modern Corporate Website Theme"
+        description="CorporateX is a high-performance and easily customizable website theme designed for modern corporate companies, based on Next.js and TailwindCSS."
         canonical="https://corporatex.vercel.app"
         openGraph={{
           type: "website",
-          locale: "tr_TR",
+          locale: "en_US",
           url: "https://corporatex.vercel.app",
           siteName: "CorporateX",
           images: [
@@ -42,8 +42,8 @@ export function MainLayout({ children }: MainLayoutProps) {
           card: "summary_large_image",
           site: "@corporatex",
           creator: "@corporatex",
-          title: "CorporateX - Modern Kurumsal Website Teması",
-          description: "CorporateX, modern kurumsal firmalar için tasarlanmış, Next.js ve TailwindCSS tabanlı, yüksek performanslı ve kolay özelleştirilebilir bir website temasıdır.",
+          title: "CorporateX - Modern Corporate Website Theme",
+          description: "CorporateX is a high-performance and easily customizable website theme designed for modern corporate companies, based on Next.js and TailwindCSS.",
           image: "https://corporatex.vercel.app/og-image.jpg"
         }}
       >

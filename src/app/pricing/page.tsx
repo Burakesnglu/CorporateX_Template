@@ -7,57 +7,57 @@ import { FiCheck } from "react-icons/fi";
 
 const plans = [
   {
-    name: "Başlangıç",
-    price: "₺4,999",
+    name: "Starter",
+    price: "$499",
     description:
-      "Küçük işletmeler ve girişimciler için ideal başlangıç paketi.",
+      "Ideal starter package for small businesses and entrepreneurs.",
     features: [
-      "5 Sayfa Web Sitesi",
-      "Responsive Tasarım",
-      "SEO Optimizasyonu",
-      "İletişim Formu",
-      "Sosyal Medya Entegrasyonu",
+      "5-Page Website",
+      "Responsive Design",
+      "SEO Optimization",
+      "Contact Form",
+      "Social Media Integration",
       "Google Analytics",
-      "1 Ay Ücretsiz Destek",
-      "Temel Hosting (1 Yıl)",
+      "1 Month Free Support",
+      "Basic Hosting (1 Year)",
     ],
   },
   {
-    name: "Profesyonel",
-    price: "₺9,999",
+    name: "Professional",
+    price: "$999",
     description:
-      "Orta ölçekli işletmeler için gelişmiş özellikler ve profesyonel destek.",
+      "Advanced features and professional support for medium-sized businesses.",
     features: [
-      "10 Sayfa Web Sitesi",
-      "Özel Tasarım",
-      "Gelişmiş SEO Optimizasyonu",
-      "Blog Sistemi",
-      "E-posta Pazarlama Entegrasyonu",
-      "Çoklu Dil Desteği",
-      "3 Ay Ücretsiz Destek",
-      "Premium Hosting (1 Yıl)",
-      "SSL Sertifikası",
-      "Yedekleme Sistemi",
+      "10-Page Website",
+      "Custom Design",
+      "Advanced SEO Optimization",
+      "Blog System",
+      "Email Marketing Integration",
+      "Multi-language Support",
+      "3 Months Free Support",
+      "Premium Hosting (1 Year)",
+      "SSL Certificate",
+      "Backup System",
     ],
   },
   {
-    name: "Kurumsal",
-    price: "₺19,999",
+    name: "Enterprise",
+    price: "$1,999",
     description:
-      "Büyük işletmeler için tam kapsamlı dijital çözümler ve özel geliştirmeler.",
+      "Comprehensive digital solutions and custom development for large businesses.",
     features: [
-      "Sınırsız Sayfa",
-      "Özel Tasarım & Geliştirme",
-      "E-ticaret Entegrasyonu",
-      "İçerik Yönetim Sistemi",
-      "Gelişmiş Güvenlik",
-      "API Entegrasyonları",
-      "6 Ay Ücretsiz Destek",
-      "Enterprise Hosting (1 Yıl)",
-      "Premium SSL Sertifikası",
-      "CDN Entegrasyonu",
-      "7/24 Teknik Destek",
-      "Performans Optimizasyonu",
+      "Unlimited Pages",
+      "Custom Design & Development",
+      "E-commerce Integration",
+      "Content Management System",
+      "Advanced Security",
+      "API Integrations",
+      "6 Months Free Support",
+      "Enterprise Hosting (1 Year)",
+      "Premium SSL Certificate",
+      "CDN Integration",
+      "24/7 Technical Support",
+      "Performance Optimization",
     ],
   },
 ];
@@ -66,19 +66,19 @@ export default function PricingPage() {
   return (
     <MainLayout>
       <SEOProvider
-        title="Fiyatlandırma | CorporateX"
-        description="CorporateX'in sunduğu web geliştirme, mobil uygulama ve UI/UX tasarım hizmetlerinin fiyatlandırması."
+        title="Pricing | CorporateX"
+        description="Pricing for web development, mobile application, and UI/UX design services offered by CorporateX."
       >
         {/* Hero Section */}
         <section className="section overflow-hidden">
           <div className="container">
             <div className="mx-auto max-w-3xl text-center">
               <h1 className="section-title">
-                Şeffaf <span className="gradient-text">Fiyatlandırma</span>
+                Transparent <span className="gradient-text">Pricing</span>
               </h1>
               <p className="section-description">
-                İhtiyaçlarınıza en uygun paketi seçin. Tüm paketlerimiz
-                özelleştirilebilir ve ek hizmetlerle genişletilebilir.
+                Choose the package that best suits your needs. All our packages are customizable 
+                and can be expanded with additional services.
               </p>
             </div>
           </div>
@@ -100,7 +100,7 @@ export default function PricingPage() {
                     </p>
                     <div className="mt-4">
                       <span className="text-4xl font-bold">{plan.price}</span>
-                      <span className="text-muted-foreground">/başlangıç</span>
+                      <span className="text-muted-foreground">/starting at</span>
                     </div>
                   </div>
                   <ul className="mb-8 space-y-3 text-sm">
@@ -113,7 +113,7 @@ export default function PricingPage() {
                   </ul>
                   <div className="mt-auto">
                     <Button asChild className="w-full">
-                      <Link href="/contact">Teklif Al</Link>
+                      <Link href="/contact">Get a Quote</Link>
                     </Button>
                   </div>
                 </div>
@@ -123,54 +123,51 @@ export default function PricingPage() {
             {/* FAQ */}
             <div className="mx-auto mt-20 max-w-3xl">
               <h2 className="text-center text-3xl font-bold">
-                Sıkça Sorulan Sorular
+                Frequently Asked Questions
               </h2>
               <div className="mt-8 space-y-6">
                 <div>
                   <h3 className="text-lg font-medium">
-                    Fiyatlara KDV dahil mi?
+                    Are taxes included in the prices?
                   </h3>
                   <p className="mt-2 text-muted-foreground">
-                    Belirtilen fiyatlara KDV dahil değildir. Fiyatlandırmaya %18
-                    KDV eklenecektir.
+                    The prices listed do not include VAT. A 18% VAT will be added to the pricing.
                   </p>
                 </div>
                 <div>
                   <h3 className="text-lg font-medium">
-                    Ödeme koşulları nelerdir?
+                    What are the payment terms?
                   </h3>
                   <p className="mt-2 text-muted-foreground">
-                    Proje başlangıcında %40, geliştirme sürecinde %30 ve proje
-                    tesliminde %30 ödeme yapılmaktadır.
+                    We require 40% payment at the start of the project, 30% during the development process, 
+                    and 30% upon project delivery.
                   </p>
                 </div>
                 <div>
                   <h3 className="text-lg font-medium">
-                    Paketler özelleştirilebilir mi?
+                    Can the packages be customized?
                   </h3>
                   <p className="mt-2 text-muted-foreground">
-                    Evet, tüm paketlerimiz ihtiyaçlarınıza göre
-                    özelleştirilebilir. İhtiyacınız olan ek özellikler için
-                    bizimle iletişime geçebilirsiniz.
+                    Yes, all our packages can be customized according to your needs. 
+                    You can contact us for additional features you may require.
                   </p>
                 </div>
                 <div>
                   <h3 className="text-lg font-medium">
-                    Proje teslim süresi ne kadar?
+                    How long does project delivery take?
                   </h3>
                   <p className="mt-2 text-muted-foreground">
-                    Proje kapsamına göre değişmekle birlikte, ortalama 4-8 hafta
-                    arasında teslim edilmektedir.
+                    Delivery time varies depending on the project scope, but typically ranges 
+                    from 4 to 8 weeks.
                   </p>
                 </div>
                 <div>
                   <h3 className="text-lg font-medium">
-                    Destek ve bakım hizmetleri nasıl işliyor?
+                    How do support and maintenance services work?
                   </h3>
                   <p className="mt-2 text-muted-foreground">
-                    Her paket için belirtilen süre boyunca ücretsiz destek
-                    sağlıyoruz. Bu süre sonrasında aylık bakım paketlerimizden
-                    faydalanabilirsiniz.
+                    We provide free support for the period specified in each package. 
+                    After this period, you can benefit from our monthly maintenance packages.
                   </p>
                 </div>
               </div>

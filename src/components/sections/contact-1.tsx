@@ -28,52 +28,52 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
 
-// Form doğrulama şeması
+// Form validation schema
 const formSchema = z.object({
   name: z.string().min(2, {
-    message: "İsim en az 2 karakter olmalıdır.",
+    message: "Name must be at least 2 characters.",
   }),
   email: z.string().email({
-    message: "Geçerli bir e-posta adresi giriniz.",
+    message: "Please enter a valid email address.",
   }),
   phone: z.string().min(10, {
-    message: "Geçerli bir telefon numarası giriniz.",
+    message: "Please enter a valid phone number.",
   }).optional(),
   subject: z.string().min(5, {
-    message: "Konu en az 5 karakter olmalıdır.",
+    message: "Subject must be at least 5 characters.",
   }),
   message: z.string().min(10, {
-    message: "Mesaj en az 10 karakter olmalıdır.",
+    message: "Message must be at least 10 characters.",
   }),
 });
 
-// Form tipi tanımı
+// Form type definition
 type ContactFormValues = z.infer<typeof formSchema>;
 
-// İletişim bilgileri
+// Contact information
 const contactInfo = [
   {
     icon: <Mail className="h-5 w-5" />,
-    title: "E-posta",
+    title: "Email",
     content: "info@corporatex.com",
     href: "mailto:info@corporatex.com",
   },
   {
     icon: <Phone className="h-5 w-5" />,
-    title: "Telefon",
-    content: "+90 (212) 123 45 67",
-    href: "tel:+902121234567",
+    title: "Phone",
+    content: "+1 (555) 123-4567",
+    href: "tel:+15551234567",
   },
   {
     icon: <MapPin className="h-5 w-5" />,
-    title: "Adres",
-    content: "Levent, 34330 Beşiktaş/İstanbul",
-    href: "https://maps.google.com/?q=Levent,+34330+Beşiktaş/İstanbul",
+    title: "Address",
+    content: "123 Main Street, New York, NY 10001",
+    href: "https://maps.google.com/?q=123+Main+Street,+New+York,+NY+10001",
   },
   {
     icon: <Clock className="h-5 w-5" />,
-    title: "Çalışma Saatleri",
-    content: "Pazartesi - Cuma: 09:00 - 18:00",
+    title: "Working Hours",
+    content: "Monday - Friday: 9:00 AM - 6:00 PM",
     href: "#",
   },
 ];
@@ -82,7 +82,7 @@ export function Contact1() {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  // Form tanımlama
+  // Form definition
   const form = useForm<ContactFormValues>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -94,18 +94,18 @@ export function Contact1() {
     },
   });
 
-  // Form gönderimi
+  // Form submission
   function onSubmit(values: ContactFormValues) {
     setIsSubmitting(true);
     
-    // Burada gerçek bir API çağrısı yapılabilir
+    // A real API call could be made here
     setTimeout(() => {
       console.log(values);
       setIsSubmitting(false);
       
       toast({
-        title: "Form başarıyla gönderildi",
-        description: "En kısa sürede sizinle iletişime geçeceğiz.",
+        title: "Form submitted successfully",
+        description: "We will contact you as soon as possible.",
         variant: "default",
       });
       
@@ -124,7 +124,7 @@ export function Contact1() {
             transition={{ duration: 0.5 }}
             className="section-title"
           >
-            Bizimle <span className="gradient-text">İletişime Geçin</span>
+            Contact <span className="gradient-text">Us</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -133,13 +133,13 @@ export function Contact1() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="section-description mx-auto max-w-2xl"
           >
-            Projeleriniz, sorularınız veya işbirliği fırsatları için bizimle iletişime geçebilirsiniz.
-            Ekibimiz en kısa sürede size dönüş yapacaktır.
+            You can contact us for your projects, questions, or collaboration opportunities.
+            Our team will get back to you as soon as possible.
           </motion.p>
         </div>
 
         <div className="mt-16 grid gap-8 lg:grid-cols-3">
-          {/* İletişim Bilgileri */}
+          {/* Contact Information */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -148,7 +148,7 @@ export function Contact1() {
             className="space-y-6 lg:col-span-1"
           >
             <div className="rounded-lg border bg-card p-6 shadow-sm">
-              <h3 className="mb-4 text-xl font-semibold">İletişim Bilgilerimiz</h3>
+              <h3 className="mb-4 text-xl font-semibold">Contact Information</h3>
               <div className="space-y-4">
                 {contactInfo.map((item, index) => (
                   <a
@@ -173,7 +173,7 @@ export function Contact1() {
             </div>
 
             <div className="rounded-lg border bg-card p-6 shadow-sm">
-              <h3 className="mb-4 text-xl font-semibold">Sosyal Medya</h3>
+              <h3 className="mb-4 text-xl font-semibold">Social Media</h3>
               <div className="flex gap-4">
                 <a
                   href="#"
@@ -259,7 +259,7 @@ export function Contact1() {
             </div>
           </motion.div>
 
-          {/* İletişim Formu */}
+          {/* Contact Form */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -267,7 +267,7 @@ export function Contact1() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="rounded-lg border bg-card p-6 shadow-sm lg:col-span-2"
           >
-            <h3 className="mb-4 text-xl font-semibold">Mesaj Gönderin</h3>
+            <h3 className="mb-4 text-xl font-semibold">Send a Message</h3>
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                 <div className="grid gap-4 md:grid-cols-2">
@@ -276,9 +276,9 @@ export function Contact1() {
                     name="name"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>İsim Soyisim</FormLabel>
+                        <FormLabel>Full Name</FormLabel>
                         <FormControl>
-                          <Input placeholder="İsim Soyisim" {...field} />
+                          <Input placeholder="Your full name" {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -289,9 +289,9 @@ export function Contact1() {
                     name="email"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>E-posta</FormLabel>
+                        <FormLabel>Email</FormLabel>
                         <FormControl>
-                          <Input placeholder="E-posta adresiniz" {...field} />
+                          <Input placeholder="Your email address" {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -304,9 +304,9 @@ export function Contact1() {
                     name="phone"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Telefon (Opsiyonel)</FormLabel>
+                        <FormLabel>Phone (Optional)</FormLabel>
                         <FormControl>
-                          <Input placeholder="Telefon numaranız" {...field} />
+                          <Input placeholder="Your phone number" {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -317,9 +317,9 @@ export function Contact1() {
                     name="subject"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Konu</FormLabel>
+                        <FormLabel>Subject</FormLabel>
                         <FormControl>
-                          <Input placeholder="Mesajınızın konusu" {...field} />
+                          <Input placeholder="Subject of your message" {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -331,10 +331,10 @@ export function Contact1() {
                   name="message"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Mesaj</FormLabel>
+                      <FormLabel>Message</FormLabel>
                       <FormControl>
                         <Textarea
-                          placeholder="Mesajınızı buraya yazın..."
+                          placeholder="Write your message here..."
                           className="min-h-32 resize-none"
                           {...field}
                         />
@@ -345,7 +345,7 @@ export function Contact1() {
                 />
                 <div className="flex items-center justify-between">
                   <p className="text-xs text-muted-foreground">
-                    * ile işaretli alanlar zorunludur
+                    * Fields marked with an asterisk are required
                   </p>
                   <Button type="submit" disabled={isSubmitting}>
                     {isSubmitting ? (
@@ -370,11 +370,11 @@ export function Contact1() {
                             d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
                           ></path>
                         </svg>
-                        Gönderiliyor...
+                        Sending...
                       </>
                     ) : (
                       <>
-                        Gönder
+                        Send
                         <Send className="ml-2 h-4 w-4" />
                       </>
                     )}
@@ -385,7 +385,7 @@ export function Contact1() {
           </motion.div>
         </div>
 
-        {/* Harita */}
+        {/* Map */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -394,14 +394,14 @@ export function Contact1() {
           className="mt-8 rounded-lg border bg-card p-1 shadow-sm"
         >
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12036.459083887504!2d29.00510005!3d41.0805678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab63f6f8f8f33%3A0x7c46f2ecd8d8d8d8!2sLevent%2C%20Be%C5%9Fikta%C5%9F%2F%C4%B0stanbul!5e0!3m2!1str!2str!4v1647789012345!5m2!1str!2str"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.9663095343008!2d-74.00425882426903!3d40.71256494588848!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2s123%20Main%20St%2C%20New%20York%2C%20NY%2010001%2C%20USA!5e0!3m2!1sen!2sus!4v1647789012345!5m2!1sen!2sus"
             width="100%"
             height="400"
             style={{ border: 0, borderRadius: "0.5rem" }}
             allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            title="CorporateX Ofis Konumu"
+            title="CorporateX Office Location"
           ></iframe>
         </motion.div>
       </div>

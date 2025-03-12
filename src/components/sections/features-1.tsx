@@ -5,27 +5,27 @@ import { FiCode, FiSmartphone, FiLayout, FiTrendingUp } from "react-icons/fi";
 
 const features = [
   {
-    name: "Web Geliştirme",
+    name: "Web Development",
     description:
-      "Modern teknolojiler kullanarak yüksek performanslı ve ölçeklenebilir web uygulamaları geliştiriyoruz.",
+      "We develop high-performance and scalable web applications using modern technologies.",
     icon: FiCode,
   },
   {
-    name: "Mobil Uygulama",
+    name: "Mobile Applications",
     description:
-      "iOS ve Android platformları için native ve cross-platform mobil uygulamalar geliştiriyoruz.",
+      "We develop native and cross-platform mobile applications for iOS and Android platforms.",
     icon: FiSmartphone,
   },
   {
-    name: "UI/UX Tasarım",
+    name: "UI/UX Design",
     description:
-      "Kullanıcı deneyimini ön planda tutan, modern ve etkileyici arayüz tasarımları oluşturuyoruz.",
+      "We create modern and impressive interface designs that prioritize user experience.",
     icon: FiLayout,
   },
   {
-    name: "Dijital Pazarlama",
+    name: "Digital Marketing",
     description:
-      "SEO, sosyal medya ve içerik pazarlaması ile markanızın dijital varlığını güçlendiriyoruz.",
+      "We strengthen your brand's digital presence with SEO, social media, and content marketing.",
     icon: FiTrendingUp,
   },
 ];
@@ -42,7 +42,7 @@ export function Features1() {
             transition={{ duration: 0.5 }}
             className="section-title"
           >
-            Hizmetlerimiz
+            Our Services
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -51,8 +51,8 @@ export function Features1() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="section-description mx-auto max-w-2xl"
           >
-            Modern teknolojiler ve yenilikçi çözümlerle işletmenizin dijital
-            dönüşümüne öncülük ediyoruz.
+            We lead your business's digital transformation with modern technologies
+            and innovative solutions.
           </motion.p>
         </div>
 

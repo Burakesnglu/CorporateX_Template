@@ -39,10 +39,25 @@ export function ThemeCustomizer() {
 
   // Apply saved settings when page loads
   useEffect(() => {
-    setRadius(radius);
-    setFont(font);
-    setColor(color);
-  }, []);
+    // Apply radius
+    const root = document.documentElement;
+    root.style.setProperty("--radius", `${radius}rem`);
+    
+    // Apply font
+    root.classList.remove("font-inter", "font-poppins", "font-montserrat", "font-roboto");
+    root.classList.add(`font-${font}`);
+    document.body.style.fontFamily = font === "inter" ? "var(--font-inter)" :
+                                     font === "poppins" ? "var(--font-poppins)" :
+                                     font === "montserrat" ? "var(--font-montserrat)" :
+                                     font === "roboto" ? "var(--font-roboto)" : "var(--font-inter)";
+    
+    // Apply color theme
+    root.classList.remove("theme-blue", "theme-green", "theme-red", "theme-purple", "theme-orange");
+    root.classList.add(`theme-${color}`);
+    
+    // Sync with localStorage
+    localStorage.setItem("theme-preference", color);
+  }, [radius, font, color]);
 
   return (
     <DropdownMenu>

@@ -29,6 +29,10 @@ export const useThemeCustomizer = create<ThemeCustomizerStore>()(
         const root = document.documentElement
         root.classList.remove("font-inter", "font-poppins", "font-montserrat", "font-roboto")
         root.classList.add(`font-${font}`)
+        document.body.style.fontFamily = font === "inter" ? "var(--font-inter)" :
+                                         font === "poppins" ? "var(--font-poppins)" :
+                                         font === "montserrat" ? "var(--font-montserrat)" :
+                                         font === "roboto" ? "var(--font-roboto)" : "var(--font-inter)"
         set({ font })
       },
 
@@ -37,6 +41,7 @@ export const useThemeCustomizer = create<ThemeCustomizerStore>()(
         const root = document.documentElement
         root.classList.remove("theme-blue", "theme-green", "theme-red", "theme-purple", "theme-orange")
         root.classList.add(`theme-${color}`)
+        localStorage.setItem("theme-preference", color)
         set({ color })
       },
     }),

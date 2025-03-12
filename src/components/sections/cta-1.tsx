@@ -43,8 +43,8 @@ export function CTA1() {
               transition={{ duration: 0.5 }}
               className="section-title"
             >
-              Projenizi Hayata Geçirmeye{" "}
-              <span className="gradient-text">Hazır Mısınız?</span>
+              Ready to Bring Your Project{" "}
+              <span className="gradient-text">to Life?</span>
             </motion.h2>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -53,8 +53,8 @@ export function CTA1() {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="section-description"
             >
-              Modern teknolojiler ve uzman ekibimizle işletmenizin dijital
-              dönüşümüne öncülük ediyoruz. Hemen ücretsiz demo için başvurun.
+              We lead your business's digital transformation with modern technologies 
+              and our expert team. Apply now for a free demo.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -64,10 +64,10 @@ export function CTA1() {
               className="mt-8 flex flex-wrap justify-center gap-4"
             >
               <Button size="lg" asChild>
-                <Link href="/contact">Ücretsiz Demo</Link>
+                <Link href="/contact">Free Demo</Link>
               </Button>
               <Button variant="outline" size="lg" asChild>
-                <Link href="/services">Hizmetlerimiz</Link>
+                <Link href="/services">Our Services</Link>
               </Button>
             </motion.div>
           </div>

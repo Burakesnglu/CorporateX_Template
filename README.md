@@ -1,85 +1,85 @@
-# CorporateX - Modern Kurumsal Web Çözümleri
+# CorporateX - Modern Corporate Web Solutions
 
-CorporateX, modern kurumsal firmalar için tasarlanmış, Next.js ve TailwindCSS tabanlı, yüksek performanslı ve kolay özelleştirilebilir bir website temasıdır.
+CorporateX is a high-performance and easily customizable website theme designed for modern corporate companies, based on Next.js and TailwindCSS.
 
-## Özellikler
+## Features
 
 - 🚀 Next.js 14 App Router
-- 💅 TailwindCSS ile modern tasarım
-- 🌙 Açık/Koyu tema desteği
-- 📱 Tam responsive tasarım
-- ⚡ Yüksek performans
-- 🔍 SEO dostu yapı
-- 🎨 Kolay özelleştirme
-- 🛠️ TypeScript ile tip güvenliği
-- 🎭 Framer Motion animasyonları
-- 📦 Hazır UI bileşenleri (shadcn/ui)
+- 💅 Modern design with TailwindCSS
+- 🌙 Light/Dark theme support
+- 📱 Fully responsive design
+- ⚡ High performance
+- 🔍 SEO friendly structure
+- 🎨 Easy customization
+- 🛠️ Type safety with TypeScript
+- 🎭 Framer Motion animations
+- 📦 Ready-to-use UI components (shadcn/ui)
 
-## Başlangıç
+## Getting Started
 
-Projeyi yerel ortamınızda çalıştırmak için:
+To run the project in your local environment:
 
 ```bash
-# Repoyu klonlayın
+# Clone the repository
 git clone https://github.com/username/corporatex.git
 
-# Proje dizinine gidin
+# Navigate to the project directory
 cd corporatex
 
-# Bağımlılıkları yükleyin
+# Install dependencies
 npm install
 
-# Geliştirme sunucusunu başlatın
+# Start the development server
 npm run dev
 ```
 
-Tarayıcınızda [http://localhost:3000](http://localhost:3000) adresini açarak projeyi görüntüleyebilirsiniz.
+You can view the project by opening [http://localhost:3000](http://localhost:3000) in your browser.
 
-## Teknoloji Yığını
+## Technology Stack
 
 - **Frontend Framework**: Next.js 14
 - **CSS Framework**: TailwindCSS 3.x
-- **Programlama Dili**: TypeScript 5.x
-- **Animasyon**: Framer Motion
-- **Form Yönetimi**: React Hook Form
-- **Tema Değiştirme**: next-themes
+- **Programming Language**: TypeScript 5.x
+- **Animation**: Framer Motion
+- **Form Management**: React Hook Form
+- **Theme Switching**: next-themes
 - **SEO**: next-seo
-- **İkonlar**: React Icons
-- **UI Bileşenleri**: shadcn/ui
+- **Icons**: React Icons
+- **UI Components**: shadcn/ui
 
-## Proje Yapısı
+## Project Structure
 
 ```
 src/
 ├── app/                    # Next.js App Router
-│   ├── (routes)/          # Sayfa rotaları
-│   ├── components/        # React bileşenleri
-│   ├── lib/              # Yardımcı fonksiyonlar
-│   └── styles/           # Global stiller
-├── components/            # Paylaşılan bileşenler
-│   ├── ui/               # UI bileşenleri
-│   └── sections/         # Sayfa bölümleri
-├── lib/                  # Yardımcı fonksiyonlar
-└── types/                # TypeScript tipleri
+│   ├── (routes)/          # Page routes
+│   ├── components/        # React components
+│   ├── lib/              # Helper functions
+│   └── styles/           # Global styles
+├── components/            # Shared components
+│   ├── ui/               # UI components
+│   └── sections/         # Page sections
+├── lib/                  # Helper functions
+└── types/                # TypeScript types
 ```
 
-## Özelleştirme
+## Customization
 
-### Tema Renkleri
+### Theme Colors
 
-Tema renklerini `src/app/globals.css` dosyasında CSS değişkenlerini düzenleyerek özelleştirebilirsiniz:
+You can customize theme colors by editing the CSS variables in the `src/app/globals.css` file:
 
 ```css
 :root {
   --primary: 221.2 83.2% 53.3%;
   --secondary: 210 40% 96.1%;
-  /* ... diğer renkler */
+  /* ... other colors */
 }
 ```
 
-### Tipografi
+### Typography
 
-Varsayılan fontu `src/app/layout.tsx` dosyasında değiştirebilirsiniz:
+You can change the default font in the `src/app/layout.tsx` file:
 
 ```typescript
 import { Inter } from "next/font/google";
@@ -87,24 +87,49 @@ import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
 ```
 
-### Bileşenler
+### Components
 
-UI bileşenlerini `src/components/ui` dizininde bulabilirsiniz. Her bileşen, shadcn/ui kullanılarak oluşturulmuştur ve kolayca özelleştirilebilir.
+You can find UI components in the `src/components/ui` directory. Each component is created using shadcn/ui and can be easily customized.
 
-## Katkıda Bulunma
+## Theme Customization System
 
-1. Bu repoyu fork edin
-2. Yeni bir branch oluşturun (`git checkout -b feature/amazing-feature`)
-3. Değişikliklerinizi commit edin (`git commit -m 'Add some amazing feature'`)
-4. Branch'inizi push edin (`git push origin feature/amazing-feature`)
-5. Bir Pull Request oluşturun
+CorporateX offers a comprehensive customization system that allows users to create their own corporate websites with minimal technical knowledge:
 
-## Lisans
+### Color Themes
+- 5+ ready-to-use color themes (Blue, Green, Red, Purple, Orange)
+- Light/Dark mode support
+- Custom color palette creation
 
-Bu proje MIT lisansı altında lisanslanmıştır. Detaylar için [LICENSE](LICENSE) dosyasına bakın.
+### Typography
+- 4+ font families (Inter, Poppins, Montserrat, Roboto)
+- Scalable system for heading and text sizes
 
-## İletişim
+### Layout and Design
+- Multiple header and footer styles
+- Corner radius settings (Square, Slightly Rounded, Fully Rounded)
+- Shadow effects and opacity settings
+
+## Browser Support
+
+CorporateX is compatible with all modern browsers:
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+- Opera (latest)
+
+## Image Credits
+
+All images used in this theme are from [Unsplash](https://unsplash.com/) and are free to use under the [Unsplash License](https://unsplash.com/license).
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Support
+
+If you have any questions or need help with the theme, please contact us:
 
 - Website: [https://corporatex.com](https://corporatex.com)
 - Twitter: [@corporatex](https://twitter.com/corporatex)
-- E-posta: info@corporatex.com
+- Email: info@corporatex.com

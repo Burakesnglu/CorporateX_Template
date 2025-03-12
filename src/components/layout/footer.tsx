@@ -7,21 +7,21 @@ import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 const navigation = {
   main: [
-    { name: "Ana Sayfa", href: "/" },
-    { name: "Hakkımızda", href: "/about" },
-    { name: "Hizmetler", href: "/services" },
-    { name: "İletişim", href: "/contact" },
+    { name: "Home", href: "/" },
+    { name: "About", href: "/about" },
+    { name: "Services", href: "/services" },
+    { name: "Contact", href: "/contact" },
   ],
   services: [
-    { name: "Web Geliştirme", href: "/services#web-development" },
-    { name: "Mobil Uygulama", href: "/services#mobile-development" },
-    { name: "UI/UX Tasarım", href: "/services#ui-ux-design" },
-    { name: "Dijital Pazarlama", href: "/services#digital-marketing" },
+    { name: "Web Development", href: "/services#web-development" },
+    { name: "Mobile App Development", href: "/services#mobile-development" },
+    { name: "UI/UX Design", href: "/services#ui-ux-design" },
+    { name: "Digital Marketing", href: "/services#digital-marketing" },
   ],
   company: [
-    { name: "Ekibimiz", href: "/about#team" },
-    { name: "Kariyer", href: "/career" },
-    { name: "SSS", href: "/faq" },
+    { name: "Our Team", href: "/about#team" },
+    { name: "Careers", href: "/career" },
+    { name: "FAQ", href: "/faq" },
     { name: "Blog", href: "/blog" },
   ],
   social: [
@@ -59,8 +59,7 @@ export function Footer() {
               <span className="text-xl font-bold">CorporateX</span>
             </Link>
             <p className="text-sm text-muted-foreground">
-              Modern kurumsal firmalar için tasarlanmış, yüksek performanslı ve
-              kolay özelleştirilebilir bir website teması.
+              A high-performance and easily customizable website theme designed for modern corporate companies.
             </p>
             <div className="flex space-x-4">
               {navigation.social.map((item) => (
@@ -79,7 +78,7 @@ export function Footer() {
           {/* Navigation Links */}
           <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
             <div>
-              <h3 className="text-sm font-semibold">Hizmetler</h3>
+              <h3 className="text-sm font-semibold">Services</h3>
               <ul role="list" className="mt-4 space-y-4">
                 {navigation.services.map((item) => (
                   <li key={item.name}>
@@ -94,7 +93,7 @@ export function Footer() {
               </ul>
             </div>
             <div>
-              <h3 className="text-sm font-semibold">Kurumsal</h3>
+              <h3 className="text-sm font-semibold">Company</h3>
               <ul role="list" className="mt-4 space-y-4">
                 {navigation.company.map((item) => (
                   <li key={item.name}>
@@ -113,18 +112,18 @@ export function Footer() {
           {/* Newsletter */}
           <div className="mt-16 xl:mt-0">
             <h3 className="text-sm font-semibold">
-              Bültenimize Abone Olun
+              Subscribe to Our Newsletter
             </h3>
             <p className="mt-4 text-sm text-muted-foreground">
-              En son haberler, güncellemeler ve özel teklifler için abone olun.
+              Subscribe for the latest news, updates, and special offers.
             </p>
             <form className="mt-4 flex flex-col sm:flex-row sm:max-w-md gap-2">
               <Input
                 type="email"
-                placeholder="E-posta adresiniz"
+                placeholder="Your email address"
                 className="min-w-0 flex-auto"
               />
-              <Button type="submit">Abone Ol</Button>
+              <Button type="submit">Subscribe</Button>
             </form>
           </div>
         </div>
@@ -132,7 +131,7 @@ export function Footer() {
         {/* Bottom Section */}
         <div className="mt-12 border-t pt-8">
           <p className="text-xs text-muted-foreground">
-            &copy; {new Date().getFullYear()} CorporateX. Tüm hakları saklıdır.
+            &copy; {new Date().getFullYear()} CorporateX. All rights reserved.
           </p>
         </div>
       </div>

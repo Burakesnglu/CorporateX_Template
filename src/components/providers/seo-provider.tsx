@@ -4,7 +4,7 @@ import React, { ReactNode } from "react";
 import { Metadata } from "next";
 import Head from "next/head";
 
-// Open Graph resim tipi
+// Open Graph image type
 interface OpenGraphImage {
   url: string;
   width?: number;
@@ -12,7 +12,7 @@ interface OpenGraphImage {
   alt?: string;
 }
 
-// Open Graph özellikleri
+// Open Graph properties
 interface OpenGraphProps {
   title?: string;
   description?: string;
@@ -23,7 +23,7 @@ interface OpenGraphProps {
   type?: string;
 }
 
-// Twitter özellikleri
+// Twitter properties
 interface TwitterProps {
   card?: "summary" | "summary_large_image" | "app" | "player";
   site?: string;
@@ -33,7 +33,7 @@ interface TwitterProps {
   image?: string;
 }
 
-// SEO Provider özellikleri
+// SEO Provider properties
 interface SEOProviderProps {
   children: ReactNode;
   title?: string;
@@ -45,22 +45,22 @@ interface SEOProviderProps {
   twitter?: TwitterProps;
 }
 
-// Not: Next.js 14'te metadata API'si kullanılmalıdır.
-// Bu bileşen client-side SEO için kullanılabilir, ancak
-// app/ dizinindeki sayfalarda metadata.ts dosyaları oluşturarak
-// daha iyi SEO sağlanabilir.
+// Note: In Next.js 14, the metadata API should be used.
+// This component can be used for client-side SEO, but
+// creating metadata.ts files in pages within the app/ directory
+// provides better SEO.
 
 export function SEOProvider({
   children,
-  title = "CorporateX - Modern Kurumsal Website Teması",
-  description = "Next.js ve TailwindCSS ile oluşturulmuş modern, yüksek performanslı ve kolay özelleştirilebilir kurumsal website teması.",
-  keywords = "kurumsal website, next.js tema, tailwindcss tema, modern website, responsive website",
+  title = "CorporateX - Modern Corporate Website Theme",
+  description = "Modern, high-performance, and easily customizable corporate website theme built with Next.js and TailwindCSS.",
+  keywords = "corporate website, next.js theme, tailwindcss theme, modern website, responsive website",
   ogImage = "/images/og-image.jpg",
   canonical,
   openGraph,
   twitter,
 }: SEOProviderProps) {
-  // Varsayılan Open Graph özellikleri
+  // Default Open Graph properties
   const defaultOpenGraph: OpenGraphProps = {
     title: title,
     description: description,
@@ -74,11 +74,11 @@ export function SEOProvider({
         alt: title,
       },
     ],
-    locale: "tr_TR",
+    locale: "en_US",
     type: "website",
   };
 
-  // Varsayılan Twitter özellikleri
+  // Default Twitter properties
   const defaultTwitter: TwitterProps = {
     card: "summary_large_image",
     site: "@corporatex",
@@ -88,7 +88,7 @@ export function SEOProvider({
     image: ogImage,
   };
 
-  // Özel ve varsayılan özellikleri birleştir
+  // Merge custom and default properties
   const mergedOpenGraph = { ...defaultOpenGraph, ...openGraph };
   const mergedTwitter = { ...defaultTwitter, ...twitter };
 
@@ -100,7 +100,7 @@ export function SEOProvider({
         <meta name="keywords" content={keywords} />
         {canonical && <link rel="canonical" href={canonical} />}
         
-        {/* Open Graph meta etiketleri */}
+        {/* Open Graph meta tags */}
         <meta property="og:title" content={mergedOpenGraph.title || title} />
         <meta property="og:description" content={mergedOpenGraph.description || description} />
         <meta property="og:url" content={mergedOpenGraph.url} />
@@ -122,7 +122,7 @@ export function SEOProvider({
           </>
         )}
 
-        {/* Twitter meta etiketleri */}
+        {/* Twitter meta tags */}
         <meta name="twitter:card" content={mergedTwitter.card} />
         <meta name="twitter:site" content={mergedTwitter.site} />
         <meta name="twitter:creator" content={mergedTwitter.creator} />
@@ -130,7 +130,7 @@ export function SEOProvider({
         <meta name="twitter:description" content={mergedTwitter.description || description} />
         <meta name="twitter:image" content={mergedTwitter.image || ogImage} />
         
-        {/* Diğer meta etiketleri */}
+        {/* Other meta tags */}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charSet="utf-8" />
         <link rel="icon" href="/favicon.ico" />
@@ -140,8 +140,8 @@ export function SEOProvider({
   );
 }
 
-// Next.js 14 Metadata API örneği
-// Bu fonksiyon, app/ dizinindeki sayfalarda metadata.ts dosyalarında kullanılabilir
+// Next.js 14 Metadata API example
+// This function can be used in metadata.ts files in pages within the app/ directory
 export function generateMetadata({
   title,
   description,
@@ -151,12 +151,12 @@ export function generateMetadata({
   openGraph,
   twitter,
 }: Omit<SEOProviderProps, "children">): Metadata {
-  // Varsayılan değerler
-  const defaultTitle = "CorporateX - Modern Kurumsal Website Teması";
-  const defaultDescription = "Next.js ve TailwindCSS ile oluşturulmuş modern, yüksek performanslı ve kolay özelleştirilebilir kurumsal website teması.";
+  // Default values
+  const defaultTitle = "CorporateX - Modern Corporate Website Theme";
+  const defaultDescription = "Modern, high-performance, and easily customizable corporate website theme built with Next.js and TailwindCSS.";
   const defaultOgImage = "/images/og-image.jpg";
   
-  // Varsayılan Open Graph özellikleri
+  // Default Open Graph properties
   const defaultOpenGraph = {
     title: title || defaultTitle,
     description: description || defaultDescription,
@@ -170,18 +170,18 @@ export function generateMetadata({
         alt: title || defaultTitle,
       },
     ],
-    locale: "tr_TR",
+    locale: "en_US",
     type: "website",
   };
 
-  // Varsayılan Twitter özellikleri
+  // Default Twitter properties
   const defaultTwitter = {
     card: "summary_large_image",
     site: "@corporatex",
     creator: "@corporatex",
   };
 
-  // Metadata nesnesi oluştur
+  // Create metadata object
   return {
     title: title || defaultTitle,
     description: description || defaultDescription,

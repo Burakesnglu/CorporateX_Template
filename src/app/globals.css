@@ -6,7 +6,7 @@
 
 @custom-variant dark (&:is(.dark *));
 
-/* Tema renkleri */
+/* Theme colors */
 .theme-blue {
   --primary-hue: 221.2;
   --primary-saturation: 83.2%;
@@ -37,7 +37,7 @@
   --primary-lightness: 53.1%;
 }
 
-/* Font stilleri */
+/* Font styles */
 .font-inter {
   --font-sans: 'Inter', sans-serif;
 }
@@ -54,7 +54,7 @@
   --font-sans: 'Roboto', sans-serif;
 }
 
-/* Border radius stilleri */
+/* Border radius styles */
 .radius-square {
   --radius: 0px;
 }
@@ -184,7 +184,7 @@
   }
 }
 
-/* Animasyon stilleri */
+/* Animation styles */
 .animate-fade-in {
   animation: fadeIn 0.5s ease-in-out;
 }
@@ -213,7 +213,7 @@
   }
 }
 
-/* Tipografi stilleri */
+/* Typography styles */
 h1, h2, h3, h4, h5, h6 {
   @apply font-bold tracking-tight;
 }
@@ -230,7 +230,7 @@ h3 {
   @apply text-2xl md:text-3xl;
 }
 
-/* Genel stil iyileştirmeleri */
+/* General style improvements */
 .section {
   @apply py-12 md:py-16 lg:py-20;
 }

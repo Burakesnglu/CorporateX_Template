@@ -11,63 +11,63 @@ import { PageHeader } from "@/components/ui/page-header";
 
 const services = [
   {
-    title: "Web Geliştirme",
+    title: "Web Development",
     description:
-      "Modern ve kullanıcı dostu web siteleri ve uygulamalar geliştiriyoruz. Next.js, React ve diğer modern teknolojileri kullanarak yüksek performanslı çözümler sunuyoruz.",
+      "We develop modern and user-friendly websites and applications. Using Next.js, React, and other modern technologies, we provide high-performance solutions.",
     image:
       "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2015&q=80",
     features: [
-      "Kurumsal Web Siteleri",
-      "E-ticaret Çözümleri",
-      "Web Uygulamaları",
-      "API Geliştirme",
-      "SEO Optimizasyonu",
-      "Performans İyileştirme",
+      "Corporate Websites",
+      "E-commerce Solutions",
+      "Web Applications",
+      "API Development",
+      "SEO Optimization",
+      "Performance Improvement",
     ],
   },
   {
-    title: "Mobil Uygulama",
+    title: "Mobile App Development",
     description:
-      "iOS ve Android platformları için native ve cross-platform mobil uygulamalar geliştiriyoruz. React Native ve Flutter gibi modern teknolojilerle hızlı ve etkili çözümler üretiyoruz.",
+      "We develop native and cross-platform mobile applications for iOS and Android platforms. We create fast and effective solutions using modern technologies like React Native and Flutter.",
     image:
       "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
     features: [
-      "iOS Uygulamaları",
-      "Android Uygulamaları",
-      "Cross-platform Çözümler",
-      "UI/UX Tasarım",
-      "App Store Optimizasyonu",
-      "Uygulama Bakımı",
+      "iOS Applications",
+      "Android Applications",
+      "Cross-platform Solutions",
+      "UI/UX Design",
+      "App Store Optimization",
+      "Application Maintenance",
     ],
   },
   {
-    title: "UI/UX Tasarım",
+    title: "UI/UX Design",
     description:
-      "Kullanıcı deneyimini ön planda tutan, modern ve etkileyici arayüz tasarımları oluşturuyoruz. Figma ve Adobe XD gibi araçlarla profesyonel tasarım süreçleri yürütüyoruz.",
+      "We create modern and impressive interface designs that prioritize user experience. We conduct professional design processes using tools like Figma and Adobe XD.",
     image:
       "https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2064&q=80",
     features: [
-      "Kullanıcı Arayüzü Tasarımı",
-      "Kullanıcı Deneyimi Tasarımı",
-      "Wireframe ve Prototipler",
-      "Design Sistemleri",
-      "Marka Kimliği",
-      "İllüstrasyon",
+      "User Interface Design",
+      "User Experience Design",
+      "Wireframes and Prototypes",
+      "Design Systems",
+      "Brand Identity",
+      "Illustration",
     ],
   },
   {
-    title: "Dijital Pazarlama",
+    title: "Digital Marketing",
     description:
-      "Markanızın dijital varlığını güçlendirmek için kapsamlı dijital pazarlama hizmetleri sunuyoruz. SEO, sosyal medya ve içerik stratejileri ile online görünürlüğünüzü artırıyoruz.",
+      "We offer comprehensive digital marketing services to strengthen your brand's digital presence. We increase your online visibility with SEO, social media, and content strategies.",
     image:
       "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2015&q=80",
     features: [
-      "SEO Danışmanlığı",
-      "Sosyal Medya Yönetimi",
-      "İçerik Stratejisi",
+      "SEO Consulting",
+      "Social Media Management",
+      "Content Strategy",
       "Email Marketing",
       "Google Ads",
-      "Analitik ve Raporlama",
+      "Analytics and Reporting",
     ],
   },
 ];
