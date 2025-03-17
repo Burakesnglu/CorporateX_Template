@@ -2,37 +2,39 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { cn } from "@/lib/utils";
 
+// Tema ile uyumlu logo verileri
 const logos = [
   {
-    name: "Company 1",
+    name: "Acme Inc",
     logo: "/globe.svg",
   },
   {
-    name: "Company 2",
+    name: "GlobalTech",
     logo: "/file.svg",
   },
   {
-    name: "Company 3",
+    name: "Innovate",
     logo: "/window.svg",
   },
   {
-    name: "Company 4",
+    name: "FutureCorp",
     logo: "/globe.svg",
   },
   {
-    name: "Company 5",
+    name: "Nexus",
     logo: "/file.svg",
   },
   {
-    name: "Company 6",
+    name: "Quantum",
     logo: "/window.svg",
   },
 ];
 
 export function Logos1() {
   return (
-    <section className="py-16 md:py-24">
+    <section className="bg-background py-20">
       <div className="container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -57,15 +59,21 @@ export function Logos1() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="flex items-center justify-center"
+              className="group flex items-center justify-center"
             >
-              <div className="relative h-12 w-24">
+              <div className="relative flex h-16 w-16 items-center justify-center rounded-full border border-border/30 bg-muted/10 p-3 transition-all duration-300 group-hover:border-primary/30 group-hover:bg-muted/20">
                 <Image
                   src={logo.logo}
                   alt={logo.name}
-                  fill
-                  className="object-contain grayscale transition-all hover:grayscale-0"
+                  width={32}
+                  height={32}
+                  className="h-8 w-8 object-contain opacity-60 transition-opacity duration-300 group-hover:opacity-100"
                 />
+                <div className="absolute -bottom-8 left-1/2 w-full -translate-x-1/2 text-center">
+                  <span className="text-xs font-medium text-muted-foreground opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                    {logo.name}
+                  </span>
+                </div>
               </div>
             </motion.div>
           ))}
